@@ -13,11 +13,20 @@ footer {
   justify-content: space-evenly;
   align-items: center;
 }
-
-.footer-icons__img {
-  width: 30px;
+@keyframes icons-둥-둥 {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-
 .footer-icons {
   font-size: 10px;
   display: flex;
@@ -26,6 +35,13 @@ footer {
   align-items: center;
   margin: 0 10px 0 10px;
   cursor: pointer;
+}
+.footer-icons__img {
+  width: 30px;
+}
+
+.footer-icons :hover.footer-icons__img {
+  animation: 2s icons-둥-둥;
 }
 
 .footer-icons__desc {
